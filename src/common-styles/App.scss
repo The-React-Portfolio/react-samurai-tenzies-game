@@ -1,0 +1,53 @@
+/* boostrap imports - minimal imports */
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/buttons";
+
+/* app imports */
+@import "src/common-styles/variables.scss";
+@import "src/common-styles/mixins.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $bodyFont;
+  font-size: $baseFontSize;
+  font-weight: 400;
+  overflow-x: hidden;
+  color: $black;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headingFont;
+}
+h1 {
+  font-size: $h1Size;
+}
+h2 {
+  font-size: $h2Size;
+}
+h3 {
+  font-size: $h3Size;
+}
+h4 {
+  font-size: $h4Size;
+}
+
+.positionRelative {
+  position: relative;
+}
+
+.customRow:before, .customRow:after {
+  display: table;
+  content: "";
+}
+.customRow:after {
+  clear: both;
+}

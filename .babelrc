@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "extensions": [".scss", ".js", ".jsx"],
+        "alias": {
+          "@commonStyles": "./src/common-styles"
+        }
+      }
+    ]
+  ]
+}
