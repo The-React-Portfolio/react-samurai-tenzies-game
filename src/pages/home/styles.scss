@@ -1,0 +1,102 @@
+/* app imports */
+@import "src/common-styles/variables.scss";
+
+main {
+  padding: 60px 20px;
+  overflow: hidden;
+  .borderBoxContainer {
+    .header {
+      .dice {
+        border-radius: 50%;
+        position: absolute;
+        top: -25px;
+        right: -35%;
+        width: 200px;
+      }
+      .text {
+        h1 {
+          font-size: 2.5rem;
+          font-weight: 900;
+          margin-top: 0;
+          text-transform: uppercase;
+        }
+        p {
+          font-size: 1rem;
+          line-height: 24px;
+          color: #444;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  main {
+    padding: 125px 40px;
+    .borderBoxContainer {
+      max-width: 700px;
+      margin: 0 auto;
+      .header {
+        .text {
+          width: 58%;
+          float: left;
+          margin-left: 2%;
+          padding-left: 20px;
+          h1 {
+            font-size: 3.0rem;
+          }
+          p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            line-height: 30px;
+          }
+        }
+        .dice {
+          width: 40%;
+          position: static;
+          float: left;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  main {
+    .borderBoxContainer {
+      max-width: 900px;
+      .header {
+        .text {
+          h1 {
+            font-size: 4.0rem;
+            margin-bottom: 15px;
+          }
+          p {
+            font-size: 1.5rem;
+            line-height: 34px;
+            font-weight: 300;
+            max-width: 450px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main {
+    .borderBoxContainer {
+      margin: 0 0 0 calc((100% - 1200px)/2);
+      .header {
+        .text {
+          h1 {
+            .hidden-lg {
+              display: none;
+            }
+          }
+        }
+        .dice {
+          width: 280px;
+        }
+      }
+    }
+  }
+}

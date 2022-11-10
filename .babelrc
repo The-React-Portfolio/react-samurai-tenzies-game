@@ -5,7 +5,11 @@
       {
         "extensions": [".scss", ".js", ".jsx"],
         "alias": {
-          "@commonStyles": "./src/common-styles"
+          "@commonStyles": "./src/common-styles",
+          "@components": "./src/components",
+          "@pages": "./src/pages",
+          "@appIcons": "./src/assets/icons",
+          "@appImages": "./src/assets/images"
         }
       }
     ]

@@ -1,0 +1,42 @@
+/* app imports */
+@import "src/common-styles/variables.scss";
+
+.appNav {
+  padding: 20px 20px;
+  background: $black;
+  font-size: 0.9rem;
+  color: $white;
+  .borderBoxContainer {
+    img {
+      width: 30px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: -4px;
+      margin-right: 10px;
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .appNav {
+    .borderBoxContainer {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  .appNav {
+    .borderBoxContainer {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .appNav {
+    .borderBoxContainer {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+}

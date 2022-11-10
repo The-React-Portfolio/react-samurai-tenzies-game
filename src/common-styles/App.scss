@@ -5,6 +5,7 @@
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/images";
 
 /* app imports */
 @import "src/common-styles/variables.scss";
@@ -26,6 +27,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $headingFont;
+  font-weight: 700;
 }
 h1 {
   font-size: $h1Size;

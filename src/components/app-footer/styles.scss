@@ -1,0 +1,50 @@
+/* app imports */
+@import "src/common-styles/variables.scss";
+
+.appFooter {
+  padding: 60px 20px;
+  background: $black;
+  .borderBoxContainer {
+    .text {
+      max-width: 450px;
+    }
+    h4 {
+      color: #bbb;
+      font-size: 1.3rem;
+      font-weight: 500;
+      line-height: 28px;
+      margin: 0 0 20px;
+      letter-spacing: -1px;
+    }
+    p {
+      font-size: 0.9rem;
+      color: #aaa;
+      line-height: 24px;
+      margin: 0;
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .appFooter {
+    .borderBoxContainer {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  .appFooter {
+    .borderBoxContainer {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .appFooter {
+    .borderBoxContainer {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+}
