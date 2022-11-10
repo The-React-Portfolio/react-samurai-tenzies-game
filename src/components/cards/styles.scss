@@ -1,0 +1,8 @@
+@import "src/common-styles/variables.scss";
+
+.card {
+  padding: 10px;
+  .image {
+    z-index: 1;
+  }
+}

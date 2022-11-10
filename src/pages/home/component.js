@@ -4,6 +4,7 @@ import React from "react";
 /* app imports */
 import "./styles.scss";
 import Header from "./header.js";
+import BodySection from "./body-section.js";
 
 export const RootPage = () => {
   return (
@@ -11,6 +12,7 @@ export const RootPage = () => {
       <main>
         <div className="borderBoxContainer">
           <Header/>
+          <BodySection/>
         </div>
       </main>
     </React.Fragment>

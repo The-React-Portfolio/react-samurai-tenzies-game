@@ -6,6 +6,7 @@ main {
   overflow: hidden;
   .borderBoxContainer {
     .header {
+      margin-bottom: 30px;
       .dice {
         border-radius: 50%;
         position: absolute;
@@ -26,6 +27,40 @@ main {
           color: #444;
           margin-top: 0;
         }
+      }
+    }
+    .cardsContainer {
+      margin: 30px auto;
+      max-width: 900px;
+      .card {
+        width: 33%;
+        float: left;
+      }
+    }
+    .rollButton {
+      display: block;
+      padding: 12px;
+      font-size: 1.1rem;
+      border-radius: 0;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  main {
+    .borderBoxContainer {
+      .cardsContainer {
+        .card:last-child {
+          float: none;
+          clear: both;
+          margin: 0 auto;
+        }
+      }
+      .rollButton {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
       }
     }
   }
@@ -57,6 +92,15 @@ main {
           float: left;
         }
       }
+      .cardsContainer {
+        .card {
+          width: 20%;
+        }
+      }
+      .rollButton {
+        width: 200px;
+        margin: 0 auto;
+      }
     }
   }
 }
@@ -84,7 +128,6 @@ main {
 @media only screen and (min-width: 1200px) {
   main {
     .borderBoxContainer {
-      margin: 0 0 0 calc((100% - 1200px)/2);
       .header {
         .text {
           h1 {

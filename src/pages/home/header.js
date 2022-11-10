@@ -7,7 +7,7 @@ import diceImage from "@appImages/dice.jpg";
 export default function Header() {
   return (
     <React.Fragment>
-      <div className="header positionRelative">
+      <div className="header positionRelative customRow">
         <img src={diceImage} className="img-fluid dice" alt="React Tenzies Game" title="React Tenzies Game"/>
         <div className="text">
           <h1>React <br className="hidden-lg"/>Tenzies <br/>Game</h1>
