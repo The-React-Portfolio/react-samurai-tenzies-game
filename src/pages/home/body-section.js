@@ -3,6 +3,7 @@ import React from "react";
 
 /* app imports */
 import {Card} from "@components/cards/index.js";
+import RollButton from "./roll-button.js";
 
 export default function BodySection() {
   return (
@@ -19,9 +20,7 @@ export default function BodySection() {
         <Card/>
         <Card/>
       </section>
-      <button className="btn btn-primary btn-lg rollButton" type="button">
-        <span>Roll Dice</span>
-      </button>
+      <RollButton/>
     </React.Fragment>
   );
 };

@@ -9,7 +9,8 @@
           "@components": "./src/components",
           "@pages": "./src/pages",
           "@appIcons": "./src/assets/icons",
-          "@appImages": "./src/assets/images"
+          "@appImages": "./src/assets/images",
+          "@appSounds": "./src/assets/sounds"
         }
       }
     ]

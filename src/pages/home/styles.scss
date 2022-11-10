@@ -30,8 +30,7 @@ main {
       }
     }
     .cardsContainer {
-      margin: 30px auto;
-      max-width: 900px;
+      margin: 30px 0;
       .card {
         width: 33%;
         float: left;
@@ -42,6 +41,12 @@ main {
       padding: 12px;
       font-size: 1.1rem;
       border-radius: 0;
+    }
+    .rollButton:disabled {
+      background: #999;
+      color: #ccc;
+      border: 0;
+      opacity: 1;
     }
   }
 }
@@ -128,6 +133,7 @@ main {
 @media only screen and (min-width: 1200px) {
   main {
     .borderBoxContainer {
+      max-width: 1200px;
       .header {
         .text {
           h1 {
