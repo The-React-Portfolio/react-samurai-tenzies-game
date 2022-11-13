@@ -3,12 +3,12 @@
 
 .card {
   padding: 10px;
-  cursor: pointer;
   margin-bottom: 20px;
   .image {
     height: 100px;
   }
   .lockIcon {
+    cursor: pointer;
     position: absolute;
     top: -12px;
     left: 50%;
