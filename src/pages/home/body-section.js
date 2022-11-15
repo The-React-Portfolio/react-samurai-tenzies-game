@@ -6,6 +6,7 @@ import {AppLoader} from "@components/app-loader/component.js";
 import {checkIfGameComplete} from "./service/check-if-complete.js";
 import {Card} from "@components/cards/component.js";
 import {AppImage} from "@components/app-image/component.js";
+import {AppSuccess} from "@components/success-component/component.js";
 import RollButton from "./roll-button.js";
 
 export default function BodySection(props) {
@@ -21,7 +22,7 @@ export default function BodySection(props) {
       <React.Fragment>
         {
           isComplete === true &&
-          <h1>Hurray!</h1>
+          <AppSuccess/>
         }
         <section className="customRow cardsContainer">
           {

@@ -1,0 +1,50 @@
+@import "src/common-styles/variables.scss";
+
+.appSuccess {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: $white;
+  background-size: cover !important;
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .posContainer {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    span {
+      font-size: 1.8rem;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 800;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .btn-dark {
+      padding: 0 20px 2px;
+      line-height: 45px;
+      font-size: 0.9rem;
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .appSuccess {
+    .posContainer {
+      span {
+        font-size: 3.0rem;
+      }
+    }
+  }
+}

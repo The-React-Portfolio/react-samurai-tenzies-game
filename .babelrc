@@ -10,7 +10,8 @@
           "@pages": "./src/pages",
           "@appIcons": "./src/assets/icons",
           "@appImages": "./src/assets/images",
-          "@appSounds": "./src/assets/sounds"
+          "@appSounds": "./src/assets/sounds",
+          "@appVideos": "./src/assets/videos"
         }
       }
     ]
