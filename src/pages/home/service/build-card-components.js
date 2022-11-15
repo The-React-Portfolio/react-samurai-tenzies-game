@@ -18,7 +18,11 @@ export default function buildCardComponents(arrayOfCards) {
 
     /* create */
     const item = (
-      <Card key={index} isLocked={cardObject.isLocked }>
+      <Card
+        key={index}
+        isLocked={cardObject.isLocked}
+        cardId={cardObject.id}
+      >
         <div className="image positionRelative">
           <AppImage {...imageProps}/>
         </div>

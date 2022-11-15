@@ -18,19 +18,19 @@ import kingOfSpades from "@appImages/king-of-spades.svg";
 
 export const getCardMap = () => {
   const cardMap = {
-    "1": aceOfSpades,
-    "2": twoOfSpades,
-    "3": threeOfSpades,
-    "4": fourOfSpades,
-    "5": fiveOfSpades,
-    "6": sixOfSpades,
-    "7": sevenOfSpades,
-    "8": eightOfSpades,
-    "9": nineOfSpades,
-    "10": tenOfSpades,
-    "11": jackOfSpades,
-    "12": queenOfSpades,
-    "13": kingOfSpades
+    "1": {name: "Ace of Spades", src: aceOfSpades},
+    "2": {name: "Two of Spades", src: twoOfSpades},
+    "3": {name: "Three of Spades", src: threeOfSpades},
+    "4": {name: "Four of Spades", src: fourOfSpades},
+    "5": {name: "Five of Spades", src: fiveOfSpades},
+    "6": {name: "Six of Spades", src: sixOfSpades},
+    "7": {name: "Seven of Spades", src: sevenOfSpades},
+    "8": {name: "Eight of Spades", src: eightOfSpades},
+    "9": {name: "Nine of Spades", src: nineOfSpades},
+    "10": {name: "Ten of Spades", src: tenOfSpades},
+    "11": {name: "Jack of Spades", src: jackOfSpades},
+    "12": {name: "Queen of Spades", src: queenOfSpades},
+    "13": {name: "King of Spades", src: kingOfSpades}
   };
   return Object.assign({}, cardMap);
 };

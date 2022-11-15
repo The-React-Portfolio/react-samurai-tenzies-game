@@ -1,3 +1,7 @@
+/* npm imports */
+import uuid from "react-uuid";
+
+/* app imports */
 import { generateRandomNumbers } from "./generate-random-numbers.js";
 import { getCardMap } from "./card-map.js";
 
@@ -8,12 +12,17 @@ export default function generateFreshDeck() {
   for (let i = 0; i < 10; ++i) {
     let key = String(generateRandomNumbers(1, 13));
     let card  = {
+      id: uuid(),
       isLocked: false,
-      name: cardMap[key].split("-").join(" "),
-      icon: cardMap[key]
+      name: cardMap[key].name,
+      icon: cardMap[key].src
     };
     arrayOfCards.push(card);
   }
 
+  /* set in local storage for future updates and use */
+  window.localStorage.setItem("tenzies_deck", JSON.stringify(arrayOfCards));
+
+  /* end */
   return arrayOfCards;
 }
