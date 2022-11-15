@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 
 /* app imports */
 import generateFreshDeck from "./generate-fresh-deck.js";
+import generateDeckOnRoll from "./generate-deck-on-roll.js";
 
 export const useCardsHook = () => {
   let [isLoading, setIsLoading] = useState(true);
@@ -16,5 +17,9 @@ export const useCardsHook = () => {
     }, 2000);
   }, []);
 
-  return {isLoading, setIsLoading, deckOfCards};
+  return {
+    isLoading,
+    deckOfCards,
+    onDiceRoll: generateDeckOnRoll(setDeckOfCards, setIsLoading)
+  };
 };

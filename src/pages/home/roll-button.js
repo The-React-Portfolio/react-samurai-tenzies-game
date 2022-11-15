@@ -4,7 +4,7 @@ import React, { useRef, useState } from "react";
 /* app imports */
 import useButtonOnLoaded from "./service/use-button-on-loaded.js";
 
-export default function RollButton() {
+export default function RollButton(props) {
   const [isDisabled, setIsDisabled] = useState(false);
   const buttonRef = useRef();
 
@@ -12,7 +12,8 @@ export default function RollButton() {
   useButtonOnLoaded(buttonRef, setIsDisabled);
 
   return (
-    <button disabled={isDisabled} ref={buttonRef} className="btn btn-primary btn-lg rollButton" type="button">
+    <button disabled={isDisabled} ref={buttonRef} className="btn btn-primary btn-lg rollButton" type="button"
+    onClick={props.onDiceRoll}>
       <span>Roll Dice</span>
     </button>
   );

@@ -9,6 +9,7 @@ import { setCardAsUnlocked } from "./service/set-card-as-unlocked.js";
 
 export const Card = (props) => {
   let [isLocked, setIsLocked] = useState(props.isLocked);
+  let [hasUpdated, setHasUpdated] = useState(false);
 
   const onClickHandler = () => {
     setIsLocked((prevState) => !prevState);
@@ -22,6 +23,7 @@ export const Card = (props) => {
     else {
       setCardAsUnlocked(props.cardId);
     }
+    props.afterLockStateChange();
   }, [isLocked]);
 
   return (
