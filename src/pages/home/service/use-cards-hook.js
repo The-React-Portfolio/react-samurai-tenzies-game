@@ -20,6 +20,6 @@ export const useCardsHook = () => {
   return {
     isLoading,
     deckOfCards,
-    onDiceRoll: generateDeckOnRoll(setDeckOfCards, setIsLoading)
+    onDiceRoll: generateDeckOnRoll(setDeckOfCards, setIsLoading),
   };
 };

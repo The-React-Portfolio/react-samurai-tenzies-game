@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: $bodyFont;
+  font-family: $appFont;
   font-size: $baseFontSize;
   font-weight: 400;
   overflow-x: hidden;
@@ -26,7 +26,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $headingFont;
+  font-family: $appFont;
   font-weight: 700;
 }
 h1 {

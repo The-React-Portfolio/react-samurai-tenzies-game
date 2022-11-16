@@ -2,10 +2,44 @@
 @import "src/common-styles/mixins.scss";
 
 .card {
-  padding: 10px;
+  padding: 25px 10px;
   margin-bottom: 20px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
   .image {
+    img {
+      transform: scale(1.6);
+      -webkit-transform: scale(1.6);
+    }
+  }
+  .image:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    width: 100px;
     height: 100px;
+    border-radius: 50%;
+    background: #aaa;
+    z-index: 0;
+    opacity: 0.25;
+  }
+  .image:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid #aaa;
+    z-index: 0;
+    opacity: 0.25;
   }
   .lockIcon {
     cursor: pointer;
@@ -26,8 +60,13 @@
 @media only screen and (min-width: 768px) {
   .card {
     padding: 15px;
+    border: 0;
     .image {
-      height: 150px;
+      margin-top: 10px;
+      img {
+        transform: scale(1.4);
+        -webkit-transform: scale(1.4);
+      }
     }
     .lockIcon {
       top: -5px;
@@ -49,29 +88,18 @@
   .card {
     padding: 30px;
     .image {
-      height: 250px;
       @include app-transition(all, 0.1s, linear);
       img {
-        border-radius: 10px;
         position: relative;
         z-index: 1;
-        background: $white;
       }
     }
-    .image:before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      -webkit-transform: translate(-50%, -50%);
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: #aaa;
-      z-index: 0;
-      opacity: 0.25;
+    .image:before,
+    .image:after {
       @include app-transition(all, 0.25s, linear);
+    }
+    .image:before {
+      transition-delay: 0.15s;
     }
     .lockIcon {
       top: 5px;
@@ -86,8 +114,12 @@
       -webkit-transform: translateY(-5px);
     }
     .image:before {
-      width: 250px;
-      height: 250px;
+      width: 130px;
+      height: 130px;
+    }
+    .image:after {
+      width: 150px;
+      height: 150px;
     }
   }
 }

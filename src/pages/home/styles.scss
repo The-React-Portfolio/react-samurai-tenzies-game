@@ -4,23 +4,27 @@
 main {
   padding: 60px 20px;
   overflow: hidden;
+  background: $black;
   .borderBoxContainer {
     .header {
-      margin-bottom: 30px;
-      .dice {
-        border-radius: 50%;
-        position: absolute;
-        top: -25px;
-        right: -35%;
-        width: 200px;
+      width: 160px;
+      margin: 0 auto 60px;
+      h1 {
+        padding: 20px;
+        font-size: 1.6rem;
+        font-weight: 900;
+        text-align: center;
+        letter-spacing: 4px;
+        border: 1px solid $white;
+        text-transform: uppercase;
+        color: $white;
+        margin: 0 auto;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-stroke-color: white;
+        -webkit-text-stroke-width: 1px;
       }
       .text {
-        h1 {
-          font-size: 2.5rem;
-          font-weight: 900;
-          margin-top: 0;
-          text-transform: uppercase;
-        }
         p {
           font-size: 1rem;
           line-height: 24px;
@@ -32,8 +36,9 @@ main {
     .cardsContainer {
       margin: 30px 0;
       .card {
-        width: 33%;
+        width: 47%;
         float: left;
+
       }
     }
     .rollButton {
@@ -54,10 +59,8 @@ main {
   main {
     .borderBoxContainer {
       .cardsContainer {
-        .card:last-child {
-          float: none;
-          clear: both;
-          margin: 0 auto;
+        .card:nth-child(odd) {
+          margin-right: 6%;
         }
       }
       .rollButton {
@@ -73,10 +76,14 @@ main {
 @media only screen and (min-width: 768px) {
   main {
     padding: 125px 40px;
+    position: relative;
     .borderBoxContainer {
       max-width: 700px;
       margin: 0 auto;
+      position: relative;
+      z-index: 5;
       .header {
+        margin-bottom: 80px;
         .text {
           width: 58%;
           float: left;
@@ -99,7 +106,8 @@ main {
       }
       .cardsContainer {
         .card {
-          width: 20%;
+          margin-bottom: 40px;
+          width: 25%;
         }
       }
       .rollButton {
@@ -114,6 +122,7 @@ main {
     .borderBoxContainer {
       max-width: 900px;
       .header {
+        float: left;
         .text {
           h1 {
             font-size: 4.0rem;
@@ -126,6 +135,12 @@ main {
             max-width: 450px;
           }
         }
+      }
+      .cardsContainer {
+        margin: 0;
+        width: calc(100% - 160px);
+        float: left;
+        padding-left: 60px;
       }
     }
   }

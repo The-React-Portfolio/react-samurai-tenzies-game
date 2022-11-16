@@ -2,19 +2,16 @@
   * helps to generate a map of cards that are used in the application
   */
 
-import aceOfSpades from "@appImages/ace-of-spades.svg";
-import twoOfSpades from "@appImages/2-of-spades.svg";
-import threeOfSpades from "@appImages/3-of-spades.svg";
-import fourOfSpades from "@appImages/4-of-spades.svg";
-import fiveOfSpades from "@appImages/5-of-spades.svg";
-import sixOfSpades from "@appImages/6-of-spades.svg";
-import sevenOfSpades from "@appImages/7-of-spades.svg";
-import eightOfSpades from "@appImages/8-of-spades.svg";
-import nineOfSpades from "@appImages/9-of-spades.svg";
-import tenOfSpades from "@appImages/10-of-spades.svg";
-import jackOfSpades from "@appImages/jack-of-spades.svg";
-import queenOfSpades from "@appImages/queen-of-spades.svg";
-import kingOfSpades from "@appImages/king-of-spades.svg";
+import aceOfSpades from "@appImages/samurai-01.svg";
+import twoOfSpades from "@appImages/samurai-02.svg";
+import threeOfSpades from "@appImages/samurai-03.svg";
+import fourOfSpades from "@appImages/samurai-04.svg";
+import fiveOfSpades from "@appImages/samurai-05.svg";
+import sixOfSpades from "@appImages/samurai-06.svg";
+import sevenOfSpades from "@appImages/samurai-07.svg";
+import eightOfSpades from "@appImages/samurai-08.svg";
+import nineOfSpades from "@appImages/samurai-09.svg";
+import tenOfSpades from "@appImages/samurai-10.svg";
 
 export const getCardMap = () => {
   const cardMap = {
@@ -28,9 +25,6 @@ export const getCardMap = () => {
     "8": {name: "Eight of Spades", src: eightOfSpades},
     "9": {name: "Nine of Spades", src: nineOfSpades},
     "10": {name: "Ten of Spades", src: tenOfSpades},
-    "11": {name: "Jack of Spades", src: jackOfSpades},
-    "12": {name: "Queen of Spades", src: queenOfSpades},
-    "13": {name: "King of Spades", src: kingOfSpades}
   };
   return Object.assign({}, cardMap);
 };

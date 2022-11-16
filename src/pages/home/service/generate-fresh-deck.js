@@ -9,8 +9,8 @@ export default function generateFreshDeck() {
   const cardMap = getCardMap();
 
   let arrayOfCards = [];
-  for (let i = 0; i < 10; ++i) {
-    let key = String(generateRandomNumbers(1, 13));
+  for (let i = 0; i < 8; ++i) {
+    let key = String(generateRandomNumbers(1, 10));
     let card  = {
       id: uuid(),
       isLocked: false,

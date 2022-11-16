@@ -8,12 +8,13 @@ export default function Header() {
   return (
     <React.Fragment>
       <div className="header positionRelative customRow">
-        <img src={diceImage} className="img-fluid dice" alt="React Tenzies Game" title="React Tenzies Game"/>
+        <h1>Samurai <br/>Tenzies</h1>
+        {/*
         <div className="text">
-          <h1>React <br className="hidden-lg"/>Tenzies <br/>Game</h1>
           <p>{`Roll until all dice are the same. Click each die to freeze it as its current value
           between rolls.`}</p>
         </div>
+        */}
       </div>
     </React.Fragment>
   );
