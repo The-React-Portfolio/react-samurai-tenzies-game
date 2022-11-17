@@ -1,5 +1,6 @@
 /* app imports */
 @import "src/common-styles/variables.scss";
+@import "src/common-styles/mixins.scss";
 
 main {
   padding: 60px 20px;
@@ -25,12 +26,52 @@ main {
         -webkit-text-stroke-width: 1px;
       }
       .text {
+        position: absolute;
+        top: 105%;
+        left: 50%;
+        transform: translate(-50%, 15px);
+        -webkit-transform: translate(-50%, 15px);
+        background: #f1f1f1;
+        padding: 20px;
+        z-index: 20;
+        border-radius: 10px;
+        width: 290px;
+        opacity: 0;
+        @include app-transition(all, 0.15s, linear);
         p {
-          font-size: 1rem;
-          line-height: 24px;
+          font-size: 0.9rem;
+          font-weight: 500;
+          line-height: 21px;
           color: #444;
-          margin-top: 0;
+          margin: 0;
         }
+      }
+      .text.show {
+        transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        opacity: 1;
+      }
+      .text:before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #f1f1f1;
+      }
+      .btn.howToPlay {
+        font-size: 0.8rem;
+        padding: 2px 7px;
+        word-spacing: -2px;
+        font-weight: 500;
+        width: 90px;
+        margin: -10px auto 0;
+        display: block;
       }
     }
     .cardsContainer {
@@ -84,20 +125,6 @@ main {
       z-index: 5;
       .header {
         margin-bottom: 80px;
-        .text {
-          width: 58%;
-          float: left;
-          margin-left: 2%;
-          padding-left: 20px;
-          h1 {
-            font-size: 3.0rem;
-          }
-          p {
-            font-size: 1.3rem;
-            font-weight: 300;
-            line-height: 30px;
-          }
-        }
         .dice {
           width: 40%;
           position: static;
@@ -124,16 +151,19 @@ main {
       .header {
         float: left;
         .text {
-          h1 {
-            font-size: 4.0rem;
-            margin-bottom: 15px;
-          }
-          p {
-            font-size: 1.5rem;
-            line-height: 34px;
-            font-weight: 300;
-            max-width: 450px;
-          }
+          top: 108%;
+          left: 0;
+          transform: translate(0, 15px);
+          -webkit-transform: translate(0, 15px);
+        }
+        .text:before {
+          transform: none;
+          -webkit-transform: none;
+          left: 45px;
+        }
+        .text.show {
+          transform: translate(0, 0);
+          -webkit-transform: translate(0, 0);
         }
       }
       .cardsContainer {
@@ -150,13 +180,6 @@ main {
     .borderBoxContainer {
       max-width: 1200px;
       .header {
-        .text {
-          h1 {
-            .hidden-lg {
-              display: none;
-            }
-          }
-        }
         .dice {
           width: 280px;
         }
