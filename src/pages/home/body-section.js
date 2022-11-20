@@ -36,6 +36,7 @@ export default function BodySection(props) {
               return (
                 <Card
                   key={index}
+                  value={cardObject.name}
                   isLocked={cardObject.isLocked}
                   cardId={cardObject.id}
                   afterLockStateChange={() => {checkIfGameComplete(setIsComplete)}}

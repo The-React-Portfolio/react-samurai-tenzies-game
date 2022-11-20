@@ -7,20 +7,29 @@
   .borderBoxContainer {
     .text {
       max-width: 450px;
+      h4 {
+        color: #ddd;
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 23px;
+        margin: 0 0 20px;
+        letter-spacing: -1px;
+      }
+      p {
+        font-size: 0.9rem;
+        color: #aaa;
+        line-height: 22px;
+        margin: 0;
+      }
     }
-    h4 {
-      color: #ddd;
-      font-size: 1.2rem;
-      font-weight: 500;
-      line-height: 26px;
-      margin: 0 0 20px;
-      letter-spacing: -1px;
-    }
-    p {
-      font-size: 0.9rem;
-      color: #aaa;
-      line-height: 24px;
-      margin: 0;
+    .creativeList {
+      margin-bottom: 0;
+      flex-direction: row;
+      li {
+        img {
+          width: 100px;
+        }
+      }
     }
   }
 }
@@ -29,6 +38,16 @@
     .borderBoxContainer {
       max-width: 700px;
       margin: 0 auto;
+      .text {
+        width: 50%;
+        float: left;
+      }
+      .creativeList {
+        margin-top: 0;
+        width: 50%;
+        float: right;
+        justify-content: flex-end;
+      }
     }
   }
 }

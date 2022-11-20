@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 
 /* app imports */
-import diceImage from "@appImages/dice.jpg";
 import popupSound from "@appSounds/click-sound.mp3";
 
 export default function Header() {
@@ -25,8 +24,10 @@ export default function Header() {
           How to Play?
         </button>
         <div className={textElementClass}>
-          <p>{`Roll until all dice are the same. Click each die to freeze it as its current value
+          <p>{`Roll until all samurai cards are the same. Click each card to freeze it as its current value
           between rolls.`}</p>
+          <br/>
+          <p>{`The 'Roll Dice' button is located at the bottom section after the cards.`}</p>
         </div>
       </div>
     </React.Fragment>

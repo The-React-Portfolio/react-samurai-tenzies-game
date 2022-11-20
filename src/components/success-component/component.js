@@ -36,7 +36,8 @@ export const AppSuccess = () => {
       }
       <div className="posContainer">
         <span className="title">
-          Congratulations
+          Victory<br/>
+          IsYours
         </span>
         <button className="btn btn-dark"
         onClick={reloadApp}>Try Again?</button>

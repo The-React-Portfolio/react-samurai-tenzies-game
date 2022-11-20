@@ -18,7 +18,7 @@ export default function generateDeckOnRoll(setDeckOfCards, setIsLoading) {
         card = Object.assign({}, cardObject);
       }
       else {
-        let key = String(generateRandomNumbers(1, 13));
+        let key = String(generateRandomNumbers(1, 10));
         card  = {
           id: uuid(),
           isLocked: false,
