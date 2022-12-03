@@ -8,10 +8,10 @@ import { applyMiddleware } from "redux";
 import { composeWithDevTools } from '@redux-devtools/extension';
 
 /* app imports */
-import { samuraiMiddleware } from "./samurai-api-fetch/index.js";
+import { cardsMiddleware } from "./cards/index.js";
 
 export const appMiddlewareCentral = () => {
   return composeWithDevTools(
-    applyMiddleware(samuraiMiddleware)
+    applyMiddleware(cardsMiddleware)
   );
 };

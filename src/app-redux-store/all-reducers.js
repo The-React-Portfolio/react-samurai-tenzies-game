@@ -6,8 +6,8 @@
 import { combineReducers } from "redux";
 
 /* app imports */
-import cardsReducer from "./cards/index.js";
-import gameStateReducer from "./game-state/index.js";
+import cardsReducer from "./reducers/cards/index.js";
+import gameStateReducer from "./reducers/game-state/index.js";
 
 export const reducersCentral = () => {
   return combineReducers({
