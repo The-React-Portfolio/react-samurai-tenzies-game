@@ -9,9 +9,10 @@ import { composeWithDevTools } from '@redux-devtools/extension';
 
 /* app imports */
 import { cardsMiddleware } from "./cards/index.js";
+import { gameStateMiddleware } from "./game-state/index.js";
 
 export const appMiddlewareCentral = () => {
   return composeWithDevTools(
-    applyMiddleware(cardsMiddleware)
+    applyMiddleware(cardsMiddleware, gameStateMiddleware)
   );
 };

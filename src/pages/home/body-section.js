@@ -1,16 +1,16 @@
 /* react imports */
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 
 /* app imports */
-import {AppLoader} from "@components/app-loader/component.js";
-import {checkIfGameComplete} from "./service/check-if-complete.js";
-import {Card} from "@components/cards/component.js";
-import {AppImage} from "@components/app-image/component.js";
-import {AppSuccess} from "@components/success-component/component.js";
+import { AppLoader } from "@components/app-loader/component.js";
+import { Card } from "@components/cards/component.js";
+import { AppImage } from "@components/app-image/component.js";
+import { AppSuccess } from "@components/success-component/component.js";
 import RollButton from "./roll-button.js";
 
 export default function BodySection(props) {
-  let [isComplete, setIsComplete] = useState(false);
+  const isComplete = useSelector(state => state.gameIsComplete);
 
   if (props.isLoading) {
     return (
@@ -39,7 +39,6 @@ export default function BodySection(props) {
                   value={cardObject.name}
                   isLocked={cardObject.isLocked}
                   cardId={cardObject.id}
-                  afterLockStateChange={() => {checkIfGameComplete(setIsComplete)}}
                 >
                   <div className="image positionRelative">
                     <AppImage {...imageProps}/>
