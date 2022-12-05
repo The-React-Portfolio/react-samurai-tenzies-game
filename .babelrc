@@ -11,7 +11,8 @@
           "@appIcons": "./src/assets/icons",
           "@appImages": "./src/assets/images",
           "@appSounds": "./src/assets/sounds",
-          "@appVideos": "./src/assets/videos"
+          "@appVideos": "./src/assets/videos",
+          "@appReduxStore": "./src/app-redux-store"
         }
       }
     ]

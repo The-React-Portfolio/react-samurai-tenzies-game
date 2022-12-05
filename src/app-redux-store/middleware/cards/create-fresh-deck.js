@@ -2,10 +2,10 @@
 import uuid from "react-uuid";
 
 /* app imports */
-import { generateRandomNumbers } from "./generate-random-numbers.js";
-import { getCardMap } from "./card-map.js";
+import { generateRandomNumbers } from "@appReduxStore/reducers/cards/generate-random-numbers.js";
+import { getCardMap } from "@appReduxStore/reducers/cards/card-map.js";
 
-export default function generateFreshDeck() {
+export default function createFreshDeck() {
   const cardMap = getCardMap();
 
   let arrayOfCards = [];
@@ -19,9 +19,6 @@ export default function generateFreshDeck() {
     };
     arrayOfCards.push(card);
   }
-
-  /* set in local storage for future updates and use */
-  window.localStorage.setItem("tenzies_deck", JSON.stringify(arrayOfCards));
 
   /* end */
   return arrayOfCards;

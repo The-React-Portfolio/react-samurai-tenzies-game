@@ -7,7 +7,7 @@ import Header from "./header.js";
 import BodySection from "./body-section.js";
 import RollButton from "./roll-button.js";
 import { BgContainer } from "@components/bg-container/component.js";
-import {useCardsHook} from "./service/use-cards-hook.js";
+import { useCardsHook } from "./hooks/use-cards-hook.js";
 
 export const RootPage = () => {
   let {
