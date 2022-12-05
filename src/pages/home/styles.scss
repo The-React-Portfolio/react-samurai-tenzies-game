@@ -46,6 +46,9 @@ main {
           margin: 0;
         }
       }
+      .text.hide {
+        display: none;
+      }
       .text.show {
         transform: translate(-50%, 0);
         -webkit-transform: translate(-50%, 0);

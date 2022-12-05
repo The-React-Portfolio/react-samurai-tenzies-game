@@ -5,14 +5,23 @@ import React, { useState } from "react";
 import popupSound from "@appSounds/click-sound.mp3";
 
 export default function Header() {
-  const [textElementClass, setTextElementClass] = useState("text");
+  const [textElementClass, setTextElementClass] = useState("text hide");
   const notificationSound = new Audio(popupSound);
 
   const onButtonClickHandler = () => {
-    setTextElementClass("text show");
-    notificationSound.play();
+    /* kick start show process */
+    setTextElementClass("text");
+    setTimeout(() => {
+      setTextElementClass("text show");
+      notificationSound.play();
+    }, 60);
+
+    /* kick start the auto hide process */
     setTimeout(() => {
       setTextElementClass("text");
+      setTimeout(() => {
+        setTextElementClass("text hide");
+      }, 180);
     }, 6000);
   };
 
