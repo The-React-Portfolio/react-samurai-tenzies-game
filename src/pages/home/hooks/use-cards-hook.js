@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 /* app imports */
-import generateDeckOnRoll from "../service/generate-deck-on-roll.js";
-import { createFreshCardsAction } from "@appReduxStore/actions/card-actions.js";
+import { createFreshCardsAction, rollDiceAction } from "@appReduxStore/actions/card-actions.js";
 
 export const useCardsHook = () => {
   let [isLoading, setIsLoading] = useState(true);
@@ -12,6 +11,13 @@ export const useCardsHook = () => {
     return state.cards;
   });
   const dispatchToReduxStore = useDispatch();
+
+  const onDiceRoll = () => {
+    setIsLoading(true);
+    let action = rollDiceAction();
+    action.setIsLoading = setIsLoading;
+    dispatchToReduxStore(action);
+  };
 
   /* load data from here */
   useEffect(() => {
@@ -24,6 +30,6 @@ export const useCardsHook = () => {
     isLoading,
     setIsLoading,
     deckOfCards,
-    //onDiceRoll: generateDeckOnRoll(setDeckOfCards, setIsLoading),
+    onDiceRoll
   };
 };

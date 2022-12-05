@@ -10,6 +10,11 @@ export const createFreshCardsAction = () => {
     type: `${BASE_STRING}/CREATE_FRESH_CARDS`
   };
 };
+export const rollDiceAction = () => {
+  return {
+    type: `${BASE_STRING}/ROLL_THE_DICE`
+  };
+};
 export const lockCardById = (cardId) => {
   return {
     type: `${BASE_STRING}/LOCK_CARD`,
