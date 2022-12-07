@@ -8,20 +8,25 @@ import { getCardMap } from "@appReduxStore/reducers/cards/card-map.js";
 export default function generateDeckOnRoll(currentDeck) {
   const cardMap = getCardMap();
 
-  const updatedDeck = currentDeck.map((card) => {
+  const updatedDeck = Object.keys(currentDeck).reduce((composed, key) => {
+    let card = currentDeck[key];
+
     if (card.isLocked) {
-      return Object.assign({}, card);
+      composed[key] = {...card};
     }
     else {
-      let key = String(generateRandomNumbers(1, 10));
-      return {
-        id: uuid(),
+      const randNum = String(generateRandomNumbers(1, 10));
+      const key = uuid();
+      composed[key] = {
+        id: key,
         isLocked: false,
-        name: cardMap[key].name,
-        icon: cardMap[key].src
+        name: cardMap[randNum].name,
+        icon: cardMap[randNum].src
       };
     }
-  });
+
+    return composed;
+  }, {});
 
   return updatedDeck;
 }

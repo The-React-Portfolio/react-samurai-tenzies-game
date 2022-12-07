@@ -1,8 +1,6 @@
-export default function performCardLockById(allCards, idToLock) {
-  return allCards.map((card) => {
-    if (card.id === idToLock) {
-      card.isLocked = true;
-    }
-    return card;
-  });
+export default function performCardLockById(stackOfCards, cardId) {
+  if (Object.keys(stackOfCards).length > 0) {
+    stackOfCards[cardId].isLocked = true;
+  }
+  return stackOfCards;
 };

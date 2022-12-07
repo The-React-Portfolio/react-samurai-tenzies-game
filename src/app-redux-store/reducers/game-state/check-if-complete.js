@@ -1,8 +1,12 @@
 export default function checkIfGameComplete(currentSelection) {
-  /* make the value check based on the first card in collection */
-  const valueReference = currentSelection[0].name;
+  const arrayOfKeys = Object.keys(currentSelection);
 
-  const allSetAsLocked = currentSelection.every((card) => {
+  /* make the value check based on the first card in collection */
+  const first = arrayOfKeys[0]
+  const valueReference = currentSelection[first].name;
+
+  const allSetAsLocked = arrayOfKeys.every((key) => {
+    const card = currentSelection[key];
     return card.name === valueReference && card.isLocked;
   });
 

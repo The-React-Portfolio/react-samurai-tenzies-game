@@ -7,7 +7,8 @@ const BASE_STRING = "cards";
 
 export const createFreshCardsAction = () => {
   return {
-    type: `${BASE_STRING}/CREATE_FRESH_CARDS`
+    type: `${BASE_STRING}/CREATE_FRESH_CARDS`,
+    payload: {}
   };
 };
 export const rollDiceAction = () => {

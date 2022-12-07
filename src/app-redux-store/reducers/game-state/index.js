@@ -6,8 +6,8 @@ let initialState = false;
 
 export default function gameStateReducer(state = initialState, action) {
   if (action.type === checkIfGameIsComplete().type) {
-    if ("cards" in action.payload && action.payload.cards.length > 0) {
-      const currentStack = action.payload.cards.slice(0);
+    if ("cards" in action.payload && Object.keys(action.payload.cards).length > 0) {
+      const currentStack = action.payload.cards;
       return gameStatusChecker(currentStack);
     }
     else {
