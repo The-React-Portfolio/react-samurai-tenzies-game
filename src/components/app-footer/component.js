@@ -20,16 +20,20 @@ export const AppFooter = () => {
         </div>
         <ul className="list-group creativeList">
           <li>
-            <img src={creative1} className="img-fluid"/>
+            <img src={creative1} className="img-fluid"
+            alt="Samurai Tenzies Game" title="Samurai Tenzies Game"/>
           </li>
           <li>
-            <img src={creative2} className="img-fluid"/>
+            <img src={creative2} className="img-fluid"
+            alt="Samurai Tenzies Game" title="Samurai Tenzies Game"/>
           </li>
           <li>
-            <img src={creative3} className="img-fluid"/>
+            <img src={creative3} className="img-fluid"
+            alt="Samurai Tenzies Game" title="Samurai Tenzies Game"/>
           </li>
           <li>
-            <img src={creative4} className="img-fluid"/>
+            <img src={creative4} className="img-fluid"
+            alt="Samurai Tenzies Game" title="Samurai Tenzies Game"/>
           </li>
         </ul>
       </div>

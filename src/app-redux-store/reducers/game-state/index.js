@@ -5,14 +5,9 @@ import gameStatusChecker from "./check-if-complete.js";
 let initialState = false;
 
 export default function gameStateReducer(state = initialState, action) {
-  if (action.type === checkIfGameIsComplete().type) {
-    if ("cards" in action.payload && Object.keys(action.payload.cards).length > 0) {
-      const currentStack = action.payload.cards;
-      return gameStatusChecker(currentStack);
-    }
-    else {
-      return state;
-    }
+  if (action.type === checkIfGameIsComplete().type &&
+    "cards" in action.payload && Object.keys(action.payload.cards).length > 0) {
+    return gameStatusChecker(action.payload.cards);
   }
   else {
     return state;

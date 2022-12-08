@@ -13,7 +13,6 @@ import { checkIfGameIsComplete } from "@appReduxStore/actions/game-state-actions
 export const Card = (props) => {
   const dispatchToReduxStore = useDispatch();
   let [isLocked, setIsLocked] = useState(props.isLocked);
-  let [hasUpdated, setHasUpdated] = useState(false);
   let [soundEffects] = useState({
     lock: new Audio(selectionSound),
     unlock: new Audio(deselectionSound)

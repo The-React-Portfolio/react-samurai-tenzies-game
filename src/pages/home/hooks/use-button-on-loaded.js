@@ -22,4 +22,20 @@ export default function useButtonOnLoaded(buttonRef, setIsDisabled) {
       buttonElement.removeEventListener("click", playSound);
     };
   }, [buttonRef, setIsDisabled]);
+
+  useEffect(() => {
+    const buttonElement = buttonRef.current;
+    const buttonClickTrigger = (event) => {
+      if (event.which === 82) {
+        buttonElement.click();
+      }
+    };
+
+    document.addEventListener("keydown", buttonClickTrigger);
+
+    return () => {
+      document.removeEventListener("keydown", buttonClickTrigger);
+    };
+
+  }, [buttonRef]);
 }

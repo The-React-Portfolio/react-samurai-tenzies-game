@@ -2,7 +2,7 @@
 import React, { useRef, useState } from "react";
 
 /* app imports */
-import useButtonOnLoaded from "./service/use-button-on-loaded.js";
+import useButtonOnLoaded from "./hooks/use-button-on-loaded.js";
 
 export default function RollButton(props) {
   const [isDisabled, setIsDisabled] = useState(false);

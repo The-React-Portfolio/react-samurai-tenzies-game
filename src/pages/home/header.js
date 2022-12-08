@@ -33,10 +33,11 @@ export default function Header() {
           How to Play?
         </button>
         <div className={textElementClass}>
-          <p>{`Roll until all samurai cards are the same. Click each card to freeze it as its current value
-          between rolls.`}</p>
-          <br/>
-          <p>{`The 'Roll Dice' button is located at the bottom section after the cards.`}</p>
+          <p>Roll until all samurai cards are the same. Click each card to freeze it as its current value
+          between rolls.</p>
+          <p>The <span className="key">Roll Dice</span> button is located at the bottom section after the cards.</p>
+          <p>You can also use the <span className="key">R</span> key on your keyboard to roll the
+          dice</p>
         </div>
       </div>
     </React.Fragment>

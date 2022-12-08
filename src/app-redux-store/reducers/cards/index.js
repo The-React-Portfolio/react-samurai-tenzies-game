@@ -7,10 +7,9 @@ import {
 } from "@appReduxStore/actions/card-actions.js";
 
 /* app imports */
-import performCardUnlockById from "./perform-unlock-card-by-id.js";
-import performCardLockById from "./perform-lock-card-by-id.js";
 import generateDeckOnRoll from "./generate-deck-on-roll.js";
 import { arrayToObjectNormalizer } from "./cards-normalizer.js";
+import { performUnlockCardById, performLockCardById } from "./lock-toggle.js";
 
 let initialState = {};
 
@@ -20,16 +19,13 @@ export default function cardsReducer(state = initialState, action) {
     return arrayToObjectNormalizer(arrayOfCards);
   }
   else if (action.type === unlockCardById().type) {
-    let stackOfCards = Object.assign({}, state);
-    return performCardUnlockById(stackOfCards, action.payload.id);
+    return performUnlockCardById(state, action.payload.id);
   }
   else if (action.type === lockCardById().type) {
-    let stackOfCards = Object.assign({}, state);
-    return performCardLockById(stackOfCards, action.payload.id);
+    return performLockCardById(state, action.payload.id);
   }
   else if (action.type === rollDiceAction().type) {
-    let stackOfCards = Object.assign({}, state);
-    return generateDeckOnRoll(stackOfCards);
+    return generateDeckOnRoll(state);
   }
   else {
     return state;

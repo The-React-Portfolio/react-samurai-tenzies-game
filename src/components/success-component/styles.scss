@@ -23,8 +23,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
-    width: 250px;
+    width: 270px;
     text-align: center;
+    border: 1px solid $white;
+    padding: 25px 16px;
     span {
       font-size: 3.5rem;
       letter-spacing: 6px;
@@ -46,15 +48,6 @@
       border-radius: 0;
       background: $red;
       border-color: $red;
-    }
-  }
-}
-@media only screen and (min-width: 768px) {
-  .appSuccess {
-    .posContainer {
-      span {
-        font-size: 3.0rem;
-      }
     }
   }
 }

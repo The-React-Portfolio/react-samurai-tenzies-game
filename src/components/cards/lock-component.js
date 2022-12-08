@@ -1,5 +1,5 @@
 /* react imports */
-import React, { useEffect } from "react";
+import React from "react";
 
 /* app imports */
 import { getLockIcons } from "./service/get-lock-icons.js";
