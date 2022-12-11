@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 /* app imports */
-import { createFreshCardsAction, rollDiceAction } from "@appReduxStore/actions/card-actions.js";
+import { createFreshCards, rollDice } from "@appReduxStore/reducers/cards/index.js";
 
 export const useCardsHook = () => {
   /* component level state management */
@@ -23,15 +23,13 @@ export const useCardsHook = () => {
   /* event handler */
   const onDiceRoll = () => {
     setIsLoading(true);
-    let action = rollDiceAction();
-    action.setIsLoading = setIsLoading;
+    let action = rollDice(setIsLoading);
     dispatchToReduxStore(action);
   };
 
   /* load data from here */
   useEffect(() => {
-    let action = createFreshCardsAction();
-    action.setIsLoading = setIsLoading;
+    let action = createFreshCards(setIsLoading);
     dispatchToReduxStore(action);
   }, []);
 

@@ -7,8 +7,8 @@ import "./styles.scss";
 import { LockComponent } from "./lock-component.js";
 import selectionSound from "@appSounds/selection-sound.wav";
 import deselectionSound from "@appSounds/deselect-sound.wav";
-import { lockCardById, unlockCardById } from "@appReduxStore/actions/card-actions.js";
-import { checkIfGameIsComplete } from "@appReduxStore/actions/game-state-actions.js";
+import { lockCardById, unlockCardById } from "@appReduxStore/reducers/cards/index.js";
+import { checkIfGameIsComplete } from "@appReduxStore/reducers/game-state/index.js";
 
 export const Card = (props) => {
   const dispatchToReduxStore = useDispatch();

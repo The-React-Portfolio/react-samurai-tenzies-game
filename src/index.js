@@ -5,11 +5,11 @@ import { Provider } from "react-redux";
 
 /* app imports */
 import { App } from './App';
-import { appReduxStore } from "./app-redux-store/index.js";
+import { appRTKStore } from "./app-redux-store/store.js";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Provider store={appReduxStore()}>
+  <Provider store={appRTKStore()}>
     <App />
   </Provider>
 );

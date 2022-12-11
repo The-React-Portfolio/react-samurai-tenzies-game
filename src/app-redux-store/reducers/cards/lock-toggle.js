@@ -1,16 +1,11 @@
-/* node module imports */
-import produce from "immer";
-
 /* unlock */
-export const performUnlockCardById = produce((draft, cardId) => {
-  if (Object.keys(draft).length > 0) {
-    draft[cardId].isLocked = false;
-  }
-});
+export const performUnlockCardById = (state, cardId) => {
+  state[cardId].isLocked = false;
+  return state;
+};
 
 /* lock */
-export const performLockCardById = produce((draft, cardId) => {
-  if (Object.keys(draft).length > 0) {
-    draft[cardId].isLocked = true;
-  }
-});
+export const performLockCardById = (state, cardId) => {
+  state[cardId].isLocked = true;
+  return state;
+};

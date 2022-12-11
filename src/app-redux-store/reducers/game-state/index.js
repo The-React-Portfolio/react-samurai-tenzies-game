@@ -1,15 +1,22 @@
+/* node module imports */
+import { createSlice } from "@reduxjs/toolkit";
+
 /* app imports */
-import { checkIfGameIsComplete } from "@appReduxStore/actions/game-state-actions.js";
 import gameStatusChecker from "./check-if-complete.js";
 
-let initialState = false;
+/* create */
+const gameStateSlice = createSlice({
+  name: "gameState",
+  initialState: false,
+  reducers: {
+    checkIfGameIsComplete(state, action) {
+      if ("cards" in action.payload && Object.keys(action.payload.cards).length > 0) {
+        return gameStatusChecker(action.payload.cards);
+      }
+    }
+  }
+});
 
-export default function gameStateReducer(state = initialState, action) {
-  if (action.type === checkIfGameIsComplete().type &&
-    "cards" in action.payload && Object.keys(action.payload.cards).length > 0) {
-    return gameStatusChecker(action.payload.cards);
-  }
-  else {
-    return state;
-  }
-}
+/* exports */
+export const { checkIfGameIsComplete } = gameStateSlice.actions;
+export default gameStateSlice.reducer;

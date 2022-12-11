@@ -1,21 +1,21 @@
 /* app imports */
-import { createFreshCardsAction, rollDiceAction } from "@appReduxStore/actions/card-actions.js";
+import { createFreshCards, rollDice } from "@appReduxStore/reducers/cards/index.js";
 import createFreshDeck from "./create-fresh-deck.js";
 
 export const cardsMiddleware = (storeApi) => {
   return (next) => {
     return (action) => {
-      if (action.type === createFreshCardsAction().type) {
+      if (action.type === createFreshCards().type) {
         setTimeout(() => {
           const freshDeckOfCards = createFreshDeck();
-          action.payload = freshDeckOfCards;
-          action.setIsLoading(false);
+          action.payload.freshDeckOfCards = freshDeckOfCards;
+          action.payload.setIsLoading(false);
           next(action);
         }, 2000);
       }
-      else if (action.type === rollDiceAction().type) {
+      else if (action.type === rollDice().type) {
         setTimeout(() => {
-          action.setIsLoading(false);
+          action.payload.setIsLoading(false);
           next(action);
         }, 2000);
       }
